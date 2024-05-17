@@ -15,7 +15,6 @@ Deploy do site:
 
 https://portfoliojosericardo.netlify.app/
 
-<a href="https://ibb.co/47Tkkg5"><img src="https://i.ibb.co/zrRddH0/delivery1.png" alt="delivery1" border="0"></a>
-
+<a href="https://ibb.co/k2F5c1k"><img src="https://i.ibb.co/QvGpmdz/GRAVAR-DEVCLUB.png" alt="GRAVAR-DEVCLUB" border="0" /></a>
 
 
