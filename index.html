@@ -366,7 +366,6 @@
         color: #333;
         padding: 1.5rem;
         border-radius: 12px;
-        width: calc(33.333% - 20px);
         max-width: 380px;
         border: 1px solid #ccc;
         display: flex;
@@ -436,19 +435,13 @@
 
       .contact {
         background-color: var(--bg-color-02);
-        padding-top: 7rem; /* Ajustado para exibir o formulário sem precisar rolar tanto */
+        padding-top: 7rem;
       }
 
       form {
         max-width: 45rem;
         margin: 0 auto;
         text-align: center;
-      }
-
-      form .input-box {
-        display: flex;
-        justify-content: space-between;
-        gap: 15px;
       }
 
       form input:not([type="hidden"]),
@@ -546,10 +539,6 @@
         .services-box {
           width: 80%;
         }
-        .card {
-          width: calc(50% - 15px);
-          max-width: 100%;
-        }
       }
 
       @media screen and (max-width: 924px) {
@@ -562,18 +551,11 @@
         html {
           font-size: 14px;
         }
-        .card {
-          width: 100%;
-        }
       }
 
       @media screen and (max-width: 528px) {
         section {
           padding: 6rem 1.5rem 3rem;
-        }
-        form .input-box {
-          flex-direction: column;
-          gap: 0;
         }
         .services-box {
           width: 100%;
@@ -845,40 +827,27 @@
         <!-- Campo oculto obrigatório para o Netlify identificar o formulário -->
         <input type="hidden" name="form-name" value="contact" />
 
-        <div class="form-group">
-          <label for="name">Seu Nome</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-            placeholder="Digite seu nome"
-          />
-        </div>
+        <input
+          type="text"
+          name="name"
+          required
+          placeholder="Digite seu nome"
+        />
 
-        <div class="form-group">
-          <label for="email">Seu E-mail</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            placeholder="seu@email.com"
-          />
-        </div>
+        <input
+          type="email"
+          name="email"
+          required
+          placeholder="Seu e-mail (ex: seu@email.com)"
+        />
 
-        <div class="form-group">
-          <label for="message">Sua Mensagem</label>
-          <textarea
-            id="message"
-            name="message"
-            required
-            rows="5"
-            placeholder="Escreva sua mensagem..."
-          ></textarea>
-        </div>
+        <textarea
+          name="message"
+          required
+          placeholder="Escreva sua mensagem..."
+        ></textarea>
 
-        <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+        <button type="submit" class="btn">Enviar Mensagem</button>
       </form>
     </section>
 
