@@ -286,7 +286,7 @@
 
         .services h2, .portfolio h2, .contact h2 {
             font-size: 2.5rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             text-align: center;
         }
 
@@ -414,6 +414,7 @@
 
         .contact {
             background-color: var(--bg-color-02);
+            padding-top: 7rem; /* Ajustado para exibir o formulário sem precisar rolar tanto */
         }
 
         form {
@@ -428,20 +429,20 @@
             gap: 15px;
         }
 
-        form input, form textarea {
+        form input:not([type="hidden"]), form textarea {
             width: 100%;
-            padding: 1rem;
+            padding: 0.9rem;
             font-size: 1rem;
             color: var(--text-color);
             background-color: var(--bg-color-01);
             border-radius: 0.5rem;
-            margin: 0.6rem 0;
+            margin: 0.5rem 0;
             border: 1px solid rgba(255,255,255,0.1);
         }
 
         form textarea {
             resize: none;
-            height: 150px;
+            height: 130px;
         }
 
         .btn {
@@ -454,7 +455,7 @@
             letter-spacing: 0.1rem;
             transition: 0.3s ease;
             cursor: pointer;
-            margin-top: 1rem;
+            margin-top: 0.8rem;
         }
 
         .btn:hover {
@@ -610,7 +611,7 @@
         <div class="about-content">
             <h3>Sobre Mim</h3>
             <h1>Desenvolvedor <span>FullStack</span></h1>
-            <p>Possuo sólida experiência no desenvolvimento de soluções de ponta a ponta, desde a arquitetura de servidores e bancos de dados até interfaces dinâmicas e responsivas. Sempre em busca de novos desafios e atualização tecnológica constante.</p>
+            <p>Possuo sólida experiência no desenvolvimento de soluções de ponta a ponta, interfaces dinâmicas e responsivas. Sempre em busca de novos desafios e atualização tecnológica constante.</p>
             <a href="#portfolio" class="btn">Ver Projetos</a>
         </div>
     </section>
@@ -646,7 +647,7 @@
         <div class="cards">
             <div class="card">
                 <img src="./assets/ztechinforcelulares.png" alt="Assistência Ténica">
-                <h3>Assistência Ténica</h3>
+                <h3>Assistência Técnica</h3>
                 <p>Criamos um site em hmtl css e javascript com informações sobre os serviços de forma simples e chamada direta para a loja.</p>
                 <a href="https://ztechinforcelulares.netlify.app/" target="_blank" class="card-btn">Acessar Site</a>
                 <a href="https://github.com/josedevricardo/ztechinforcelulares" target="_blank" class="card-github-btn">
@@ -658,6 +659,15 @@
                 <h3>Cardápio Delivery Moderno</h3>
                 <p>Loja virtual otimizada com carrinho de compras dinâmico, painel administrativo e gateway de pagamento.</p>
                 <a href="https://cardapioburgue.netlify.app/" target="_blank" class="card-btn">Acessar Site</a>
+                <a href="https://github.com/josedevricardo/cardapioplanetburguer" target="_blank" class="card-github-btn">
+                    <i class="fab fa-github"></i> Código no GitHub
+                </a>
+            </div>
+            <div class="card">
+                <img src="./assets/painelpedidos.png" alt="App Web Tempo">
+                <h3>Painel Admin Produtos</h3>
+                <p>Painel administrativo para gerenciamento de produtos com painel de pedidos de delivery para ter acesso temos um login.</p>
+                <a href="https://cardapioburgue.netlify.app/admin" target="_blank" class="card-btn">Acessar Site</a>
                 <a href="https://github.com/josedevricardo/cardapioplanetburguer" target="_blank" class="card-github-btn">
                     <i class="fab fa-github"></i> Código no GitHub
                 </a>
@@ -681,10 +691,10 @@
                 </a>
             </div>
             <div class="card">
-                <img src="./assets/sorteador.png" alt="App Web Tempo">
+                <img src="./assets/portfolio.png" alt="App Web Tempo">
                 <h3>Portfólio</h3>
                 <p>Onde todos os projetos de jose ricardo se encontra site simples feito html css e javascript.</p>
-                <a href="https://climabom.netlify.app/" target="_blank" class="card-btn">Acessar Site</a>
+                <a href="https://portifoliojosericardo.netlify.app/" target="_blank" class="card-btn">Acessar Site</a>
                 <a href="https://github.com/josedevricardo/meu-portifolio" target="_blank" class="card-github-btn">
                     <i class="fab fa-github"></i> Código no GitHub
                 </a>
@@ -695,8 +705,8 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <h2>Fale <span>Comigo</span></h2>
-        <form action="https://formsubmit.co/josericardoprogramador@mail.com" method="POST">
-            <input type="hidden" name="_captcha" value="false">
+        <form name="contact" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact">
             
             <div class="input-box">
                 <input type="text" name="name" id="name" placeholder="Seu Nome" required>
