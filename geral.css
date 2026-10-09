@@ -1,166 +1,116 @@
+/* Container geral dos cards */
 .cards {
-    margin: 0 auto; /* Define as margens superior e inferior como 0 e as laterais como automáticas, o que centraliza horizontalmente */
-    width: 80%; /* Ajuste a largura conforme desejado */
-  
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
 }
 
-section {
-    margin: 0 auto; /* Define as margens superior e inferior como 0 e as laterais como automáticas, o que centraliza horizontalmente */
-    width: 100%; /* Ajuste a largura conforme desejado */
-  
-}
-
+/* Flexbox principal dos projetos */
 main.cards {
-        display: flex;
-        padding: 30px;
-       
-        
-        
-    }
-        
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px; /* Substitui as margens manuais entre os cards */
+    padding: 30px 0;
+}
+
+/* Estilo base de cada card */
 main.cards section.card {
-        display: flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #222;
+    padding: 25px 20px;
+    border-radius: 8px;
+    width: calc(33.333% - 22px);
+    max-width: 458px;
+    box-sizing: border-box;
+    transition: all 0.5s ease;
+}
+
+/* Efeito Hover nos cards */
+main.cards section.card:hover {
+    transform: translateY(-15px);
+    cursor: pointer;
+}
+
+/* Ícones dos cards */
+main.cards section.card .icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 10px;
+}
+
+main.cards section.card img {
+    width: 100%;
+    height: auto;
+}
+
+/* Títulos e textos dos cards */
+main.cards section.card h3 {
+    font-size: 1.1rem;
+    margin: 16px 0;
+    color: #fff;
+}
+
+main.cards section.card span {
+    font-weight: 300;
+    font-size: 90%;
+    color: #ccc;
+    margin-bottom: 16px;
+}
+
+/* Botões base */
+main.cards section.card button {
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    border-radius: 32px;
+    border: 0;
+    cursor: pointer;
+    font-size: 80%;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+/* Cores específicas e sombras de cada card */
+main.cards section.card.site1 {
+    background: #222;
+    box-shadow: 20px 20px 50px -30px #dbc4ff;
+}
+main.cards section.card.site1 button {
+    background: linear-gradient(to right, #9f66ff, #dfcbff);
+    color: #000; /* Texto escuro para contraste melhor no gradiente claro */
+}
+
+main.cards section.card.site2 {
+    background: #222;
+    box-shadow: 20px 20px 50px -30px #afd6ff;
+}
+main.cards section.card.site2 button {
+    background: linear-gradient(to right, #3e8aff, #dfcbff);
+    color: #000;
+}
+
+main.cards section.card.site3 {
+    background: #222;
+    box-shadow: 20px 20px 50px -30px #ffc1d5;
+}
+main.cards section.card.site3 button {
+    background: linear-gradient(to right, #18e255, #CCE5FF);
+    color: #000;
+}
+
+/* Responsividade para tablets e celulares */
+@media screen and (max-width: 911px) {
+    main.cards {
         flex-direction: column;
         align-items: center;
-        text-align: center;
-        background: white;
-        padding: 1rem 1.5rem;
-        border-radius: 8px;
-        max-width: 458px;
-        margin-left: 32px;
     }
-    
-    main.cards section.card:first-child{
-        margin: 0;
-    }
-    
-    main.cards section.card .icon {
-        width: 64px;
-        height: 64px;
-    }
-    
-    main.cards section.card img{
+
+    main.cards section.card {
         width: 100%;
-       
+        max-width: 100%;
     }
-    
-    main.cards section.card h3 {
-        font-size: 100%;
-        margin: 16px 0;
-    
-    }
-    
-    main.cards section.card span {
-        font-weight: 300;
-        max-width: 240px;
-        font-size: 80%;
-        margin-bottom: 16px;
-    }
-    
-    
-    main.cards section.card button {
-        padding: 0.5rem 1rem;
-        text-decoration: uppercase;
-        border-radius: 32px;
-        border: 0;
-        cursor: pointer;
-        font-size: 80%;
-        font-weight: 500;
-        color: #fff;
-    }
-    
-    main.cards section.card.card.site1 {
-        width: calc(33% - 20px);
-        background: #222;
-        text-align: center;
-        border-radius: 6px;
-        padding: 20px 25px;
-        transition: all 0.5s ease;
-        
-      
-    }
-    
-    main.cards section.card.card.site1:hover {
-        transform: translateY(-15px);
-        cursor: pointer;
-    }
-    
-    
-    main.cards section.card.card.site2 {
-        width: calc(33% - 20px);
-        background: #222;
-        text-align: center;
-        border-radius: 6px;
-        padding: 20px 25px;
-        transition: all 0.5s ease;
-       
-    }
-    
-    main.cards section.card.card.site2:hover {
-        transform: translateY(-15px);
-        cursor: pointer;
-    }
-    
-    main.cards section.card.card.site3 {
-        width: calc(33% - 20px);
-        background: #222;
-        text-align: center;
-        border-radius: 6px;
-        padding: 20px 25px;
-        transition: all 0.5s ease;
-       
-    }
-    
-    main.cards section.card.card.site3:hover {
-        transform: translateY(-15px);
-        cursor: pointer;
-    }
-    
-    
-    
-    
-    
-    
-    main.cards section.card.card.site1 button {
-        background: linear-gradient(to right, #9f66ff, #dfcbff);
-        
-    }
-    
-    main.cards section.card.card.site2 button {
-        background: linear-gradient(to right, #3e8aff, #dfcbff);
-    }
-    
-    main.cards section.card.card.site3 button {
-        background: linear-gradient(to right, #18e255,#CCE5FF);
-    }
-    
-    
-    
-    main.cards section.card.card.site1 {
-        box-shadow: 20px 20px 50px -30px #dbc4ff;
-    
-    }
-    
-    main.cards section.card.card.site2 {
-        box-shadow: 20px 20px 50px -30px #afd6ff;
-    }
-    
-    main.cards section.card.card.site3 {
-        box-shadow: 20px 20px 50px -30px #ffc1d5;
-    }
-    
-    @media screen and (max-width: 911px) {
-        main.cards {
-           -ms-flex-direction: column-reverse;
-    
-        }
-    
-       
-        }
-    
-    
-        
-    
-    
-        
-    
+}
